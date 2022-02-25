@@ -23,7 +23,7 @@ REST-Rant is an app where users can review restaurants.
 | DELETE |/places/:id/rant/:rantId |   Delete a comment about a place       |
 | GET    |        *                |  404 page  any route not defined       |
 
-
+# Data and picture
 
 <br>
 <img height="500" src="https://github.com/ronCodeTracker/project-REST-rant/blob/main/gitHubMedia/drwOneHTML.drawio.png" />
