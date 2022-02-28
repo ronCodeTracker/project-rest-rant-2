@@ -5,10 +5,19 @@
 const React = require('react')
 const Def = require('../default')
 
-function Index() {
+function Index(data) {
+    let placesFormatted = data.places.map((place) => {
+        return (
+            <div>
+                <h2>{place.name}</h2>
+                <img src={place.pic} alt={place.name}></img>
+            </div>
+        )
+    })
     return (
         <Def>
-            <h2>Index Page</h2>
+            <h2>PLACES INDEX PAGE</h2>
+            {placesFormatted}
         </Def>
     )
 }
