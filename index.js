@@ -15,6 +15,7 @@ const PORT = process.env.PORT
 
 // MIDDLEWARE
 app.set('views', __dirname + '/views')
+
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 
@@ -24,7 +25,7 @@ app.use('/places', require('./controllers/places'))
 
 //routes
 app.get('/', (req, res) => {
-    res.send('Hello world!')
+    res.render('home')
 })//home page
 
 
