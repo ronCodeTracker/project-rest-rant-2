@@ -39,7 +39,17 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    res.send('GET/places/:id')//details about a place
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+        res.render('places/show', {place: places[id]})//details about a place
+    }
+    
 })
 
 //router.put?  update a place  (places/:id)
