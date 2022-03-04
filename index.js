@@ -11,6 +11,7 @@ require('dotenv').config()  //configuration
 const express = require('express')// dependency
 const app = express()//configuration
 const PORT = process.env.PORT
+const methodOverride = require('method-override')
 
 
 // MIDDLEWARE
@@ -22,6 +23,9 @@ app.use(express.static('public'))
 
 //Middleware
 app.use(express.urlencoded({ extended: true }))
+
+// Middleware
+app.use(methodOverride('_method'))
 
 // places
 app.use('/places', require('./controllers/places'))
