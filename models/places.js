@@ -13,7 +13,17 @@ let places = [{
     state: 'AZ',
     cuisines: 'Coffee, Bakery',
     pic: '/images/coffee.jpg'
-    }]
+    }
+    ,
+    {
+        name: 'Taco Bell',
+        city: 'OKC',
+        state: 'Oklahoma',
+        cuisines: 'Mex Food',
+        pic: 'https://th.bing.com/th/id/OIP.L2xuR' +
+            '6qil3Mrybej0yKNfgHaFj?w=220&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7'
+    }
+]
 
 
 
