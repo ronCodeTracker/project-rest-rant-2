@@ -55,12 +55,23 @@ router.get('/:id', (req, res) => {
 
 
 router.get('/:id/edit', (req, res) => {
-    res.send('GET/places/:id/edit')
+
+    let id = Number(req.params.id)
+    if (isNaN(id)) {
+        res.render('error404')
+    }
+    else if (!places[id]) {
+        res.render('error404')
+    }
+    else {
+        res.render('places/edit', { place: places[id] })
+    }
+
 })//page for editing a place
 
 
 //router.put?  update a place  (places/:id)
-router.put('places/:id', (req, res) => {
+router.put('/:id', (req, res) => {
     res.send('update')
 })
 
