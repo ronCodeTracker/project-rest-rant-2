@@ -9,7 +9,7 @@ function show (data) {
     return (
         <Def>
           <main>
-                <h1>Show Page</h1>
+                <h1 className="space2">Show Page</h1>
                 <h2>{data.place.name}</h2>
                 <p className="text-center">
                     {data.place.cuisines}
@@ -29,11 +29,11 @@ function show (data) {
 
                 
 
-                <a href={`/places/${data.id}/edit`} className="btn btn-warning">
+                <a href={`/places/${data.id}/edit`} className="btn btn-warning space2">
                     Edit
                 </a>
                 <form method="POST" action={`/places/${data.id}?_method=DELETE`}>
-                    <button type="submit" className="btn btn-danger">
+                    <button type="submit" className="btn btn-danger space2">
                         Delete
                     </button>
                 </form>

@@ -11,7 +11,7 @@ function Index(data) {
             <div key={place.name} className="col-sm-6">
 
                 <h2>
-                    <a href={`/places/${index}`} >{place.name}
+                    <a href={`/places/${index}`} className="nounderline" >{place.name}
                     </a>
                 </h2>
 
@@ -29,7 +29,7 @@ function Index(data) {
     })
     return (
         <Def>
-            <h2>Places to Rant and Rave About</h2>
+            <h2 className="space2">Places to Rant and Rave About</h2>
             {placesFormatted}
         </Def>
     )

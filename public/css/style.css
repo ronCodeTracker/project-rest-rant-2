@@ -44,4 +44,29 @@ main {
 }
 
 
+.displayChange{
+    display: block;
+    
+}
 
+
+
+.alignCenter{
+    margin: 10px auto;
+    margin-bottom: 50px;
+
+}
+
+.space{
+    margin-bottom: 100px;
+    visibility:hidden;
+}
+
+.space2{
+    margin: 20px;
+}
+
+
+.nounderline{
+    text-decoration:none;
+}
