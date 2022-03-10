@@ -27,7 +27,12 @@ function show (data) {
                     <p>No comments yet!</p>
                 </div>
 
-                
+                <h3>
+                    {data.place.showEstablished()}
+                </h3>
+                <h4>
+                    Serving {data.place.cuisines}
+                </h4>
 
                 <a href={`/places/${data.id}/edit`} className="btn btn-warning space2">
                     Edit
