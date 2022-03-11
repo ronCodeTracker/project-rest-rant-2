@@ -7,14 +7,15 @@
 
 const router = require('express').Router()
 const db = require('../models')
-
+//const places = require('../models/places')
 
 
 // index route
 router.get('/', (req, res) => {
+
     db.Place.find()
         .then((places) => {
-            res.render('places/index', { places })
+            res.render('places/index', { places:places })
         })
         .catch(err => {
             console.log(err)
@@ -24,8 +25,14 @@ router.get('/', (req, res) => {
 
 // create new place route
 router.post('/', (req, res) => {
+    console.log(req.body)
+    if (!req.body.pic) {
+        // Default image if one is not provided
+        req.body.pic = 'http://placekitten.com/400/400'
+    }
     db.Place.create(req.body)
-        .then(() => {
+        .then((placeVar) => {
+            console.log(placeVar)
             res.redirect('/places')
         })
         .catch(err => {
